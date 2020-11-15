@@ -11,7 +11,7 @@ class League extends Model
 
 
 
-protected $table = 'league';
+    
 	public $timestamps = false;
 
 	protected $casts = [

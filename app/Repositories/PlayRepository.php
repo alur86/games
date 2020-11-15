@@ -107,10 +107,10 @@ class PlayRepository
             'matches.home_goal',
             'matches.away_goal',
             'week_id',
-            'home.name as home_team',
-            'home.logo as home_logo',
-            'away.logo as away_logo',
-            'away.name as away_team')
+            'home as home_team',
+            'home as home_logo',
+            'away as away_logo',
+            'away as away_team')
             ->join('weeks', 'weeks.id', '=','matches.week_id')
             ->join('teams as home', 'home.id', '=','matches.home')
             ->join('teams as away', 'away.id', '=','matches.away')
@@ -133,10 +133,10 @@ class PlayRepository
             'matches.away_goal',
             'week_id',
             'weeks.name',
-            'home.logo as home_logo',
-            'away.logo as away_logo',
-            'home.name as home_team',
-            'away.name as away_team')
+            'logo as home_logo',
+            'logo as away_logo',
+            'name as home_team',
+            'away as away_team')
             ->join('weeks', 'weeks.id', '=','matches.week_id')
             ->join('teams as home', 'home.id', '=','matches.home')
             ->join('teams as away', 'away.id', '=','matches.away')
